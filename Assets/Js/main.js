@@ -62,9 +62,11 @@ for (let i = 0; i < emailUsers.length; i++) {
 
 // Inizializzazione variabili
 const numeroGiocatore = Math.floor(Math.random() * 6) + 1;
-console.log("il numero random del Giocatore è: " + numeroGiocatore);
+/* console.log("il numero random del Giocatore è: " + numeroGiocatore); */
+document.getElementById("giocatore").innerHTML += numeroGiocatore;
 const numeroComputer = Math.floor(Math.random() * 6) + 1;
-console.log("il numero random del Computer è: " + numeroComputer);
+/* console.log("il numero random del Computer è: " + numeroComputer); */
+document.getElementById("computer").innerHTML += numeroComputer;
 
 
 
@@ -73,9 +75,12 @@ console.log("il numero random del Computer è: " + numeroComputer);
 
 // Condizione di vittoria
 if (numeroGiocatore > numeroComputer) {
-    console.log("il Giocatore ha vinto");
+    document.getElementById("result").innerHTML += "Il Giocatore ha vinto!";
+    /* console.log("il Giocatore ha vinto"); */
 } else if (numeroGiocatore == numeroComputer) {
-    console.log("Siete pari! Non ha vinto nessuno.");
+    document.getElementById("result").innerHTML += "Siete pari! Non ha vinto nessuno.";
+   /*  console.log("Siete pari! Non ha vinto nessuno."); */
 } else {
-    console.log("il Computer ha vinto");
+     document.getElementById("result").innerHTML += "Il Computer ha vinto!"
+    /* console.log("il Computer ha vinto"); */
 }
