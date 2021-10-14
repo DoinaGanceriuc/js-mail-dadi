@@ -49,6 +49,33 @@ for (let i = 0; i < emailUsers.length; i++) {
 /*  console.log(mailTrovata); */
 })
 
-/* Gioco dei dadi
-Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-Stabilire il vincitore, in base a chi fa il punteggio più alto. */
+/* Gioco dei dadi*/
+
+/* Strumenti
+-Math
+-querySelector/getElementById
+-if/else
+*/
+
+
+// Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
+
+// Inizializzazione variabili
+const numeroGiocatore = Math.floor(Math.random() * 6) + 1;
+console.log("il numero random del Giocatore è: " + numeroGiocatore);
+const numeroComputer = Math.floor(Math.random() * 6) + 1;
+console.log("il numero random del Computer è: " + numeroComputer);
+
+
+
+
+// Stabilire il vincitore, in base a chi fa il punteggio più alto.
+
+// Condizione di vittoria
+if (numeroGiocatore > numeroComputer) {
+    console.log("il Giocatore ha vinto");
+} else if (numeroGiocatore == numeroComputer) {
+    console.log("Siete pari! Non ha vinto nessuno.");
+} else {
+    console.log("il Computer ha vinto");
+}
